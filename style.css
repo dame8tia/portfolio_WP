@@ -1,0 +1,460 @@
+/*
+Theme Name: Portfolio
+Theme URI: 
+Author: Laetitia TURQUOIS - Dev Web Junior
+Author URI: 
+Requires at least: 5.3
+Tested up to: 6.1
+Requires PHP: 5.6
+Version: 1.7
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Portfolio
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+:root{
+    --font_nova_square : "Nova square";
+    --color_blue_elec : #09DBF8;
+    --color_red_kuoni : #ff4d5a ;
+    --color_blue_aeag : #4d64b3;
+}
+
+.lien{
+    color:white;
+}
+
+.font_custom_dev{
+    font-family: var(--font_nova_square);
+}
+.color_custom_01{
+    color:var(--color_blue_elec);
+}
+
+/* repere */
+.repere{
+    border:red solid 2px;
+}
+.repere_row{
+    border:blue solid 5px;
+}
+.repere_container_tot{
+    border:rgb(19, 247, 106) solid 5px;
+}
+
+.myClass_text-align-justify{
+    text-align:justify;
+}
+.bcg_white-gris{
+    background-color: #d2cece; 
+}
+.bcg_blue{
+    background-color: #4d64b3;
+}
+/* .bcg_degrade{
+/*     background-image: linear-gradient(14deg, rgba(2,0,36,1), rgba(191,194,198,1));
+    background-image: linear-gradient(14deg, rgba(40,42,54,1), rgba(40,42,54,1));
+} */
+
+.container_border{
+    border:1px solid var(--color_blue_elec);
+}
+
+h1{
+    text-transform: uppercase;
+    width:fit-content;
+    position:relative;
+    color: #4d64b3;
+}
+
+h1::after{
+    content:'';
+    position:absolute;
+    bottom:-2px;
+    left:0px;
+    width:100%;
+    height:2px;
+    background-color:  #4d64b3 ; /* rgba(34,36,388,1); */
+}
+/*
+h1:hover::after{
+    content:'';
+    border: 2px solid rgba(34,36,388,0.15);
+    background-color: #ff4d5a;
+    
+    position:absolute;
+    bottom:-2px;
+    left:0px;
+} */
+
+
+/* ----------------- ----------------- */
+body{
+    border: green solid 2px;
+}
+
+header{
+    background-image: url("../../uploads/2023/02/nasa_saturn-768x690.jpg");
+    background-size: cover;
+}
+
+.header_container{
+    min-height:100vh;
+}
+
+/* Header Partie haute */
+.navbar-toggler{
+    color:var(--color_blue_elec);
+    border-color: var(--color_blue_elec);
+}
+.nav-link{
+    color:var(--color_blue_elec);
+}
+.nav-link:hover{
+    color:rgb(248, 11, 192);
+}
+.nav-link .active{
+    color:var(--color_blue_elec);
+}
+
+/* Header Partie basse */
+.menu_deco{
+    position:relative;
+    display: block;
+}
+.menu_deco::before{
+    display: block;
+/*     content:".";
+    color:var(--color_blue_elec); */
+    content:"";
+    position:relative;
+    
+    /* transform: translateY(-10px); */
+    width:30px;
+    height:3px;
+
+    background-color: var(--color_blue_elec);
+    margin-top:0.6rem;
+
+    transition-property: width, height;
+    transition-duration: 0.5s, 0.5s;
+    transition-timing-function: ease-in-out, ease-in-out;
+}
+
+.menu_deco:hover::before{
+    width:60px;
+    height:4px;
+}
+
+.menu_deploy{
+    display:none;
+}
+
+/* .list-group-item{
+    color:var(--color_blue_elec);
+    /* transform: rotate(-15deg); 
+}
+
+.list-group-item:hover{
+    color:var(--color_blue_elec);
+    font-weight: 700;    
+} */
+
+
+/* ------ Main Debut --- */
+.avatar{
+    width:150px;
+    height:150px;
+    margin-bottom:1.5rem;
+}
+
+.avatar:active {
+    transform: rotatey(180deg);
+}
+
+.about_key_point{
+    width:50%;
+}
+
+
+.aboutMe__layus{
+    border: 1px solid rgba(34,36,388,0.15);;
+    padding: 5px;
+    width:50%;
+    height:fit-content;
+    position:relative;
+    background-color: #fff;
+}
+.aboutMe__layus::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    transform: rotatez(3deg);
+    border: 1px solid rgba(34,36,388,0.15);
+    padding: 5px;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+/* -- Compétences --*/
+
+
+/* -- Réalisations */
+.card_dim{
+    width:18rem;
+    height:24rem;
+    margin-top:1.5rem;
+}
+.bcg__card__rea{
+    height:8rem;
+    background-size: cover;
+}
+
+.display-card{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+.card-body .btn-primary{
+    width: fit-content;
+}
+.img__02{
+    background-image: url("/images/nasa_saturn.jpg");
+}
+.img__03{
+    background-image: url("/images/rivers.jpg");
+}
+
+/* Timeline */
+
+.timeline{
+    padding-bottom:20px;
+}
+
+.timeline-object {
+    display:flex;
+    align-items : flex-start;
+    justify-content: flex-start;
+    margin-top: 30px;
+    position:relative;
+}
+
+.timeline-content {
+    max-width:700px;
+    margin-left:3px;
+    position: relative;
+}
+
+.timeline-content::before{
+    content:'';
+    display: block;
+    position: absolute;
+    top:10px;
+    left:-16px;
+    width: 4px;
+    height:120%;
+    background-color: var(--color_blue_aeag);
+}
+
+.last::before{
+    height:95%;
+}
+
+.timeline-date {
+    min-width : 140px;
+}
+
+.timeline-status{
+    flex-shrink: 0;
+    height:23px;
+    width:23px;
+    border-radius: 50%;
+    background-color: var(--color_blue_aeag);
+}
+
+
+
+
+
+
+/* expériences 1er version pas top */
+/* .exp__backgr{
+    height:100%;
+    position:relative;
+}
+.exp__backgr::before{
+    content: "";
+    position: absolute;
+    height:100%;
+    width:100%;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url("/images/pascal-mauerhofer-BLOWia_UMD4-unsplash.jpg");
+    background-size: cover;
+    opacity:0.5;
+}
+
+.exp__square__red,.exp__square__red__02{
+    position:relative;
+    margin:5px;
+    width:fit-content;
+    height:fit-content;
+    background-color: #ff4d5a;
+    border-radius: 10px;
+}
+.exp__detail{
+    position:relative;
+    background-color: #d2cece;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding:0.6rem;
+    margin-left: 0.6rem;
+}
+.exp__detail::before{
+    position:absolute;
+    content:"";
+    width:5px;
+    height:100%;
+    top:0;
+    left:-8px;
+    background-color: #fff;
+}
+.exp__detail__02{
+    position:relative;
+    background-color: #d2cece;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding:0.6rem;
+    margin-left: 0.6rem;
+}
+.exp__square__red__02::before{
+    position:absolute;
+    content:"";
+    width:5px;
+    height:100%;
+    top:0;
+    left:-8px; 
+    background-color: #fff;
+} */
+
+/* --------- CONTACT ----------- */
+.encadre{
+    /* width:fit-content; */
+    height:auto;
+    background-color:#4d64b3;
+    border-radius: 25px;
+    
+}
+
+
+/* --------- FOOTER -------------*/
+
+.icon--contact {
+    display:flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon--contact li {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:53px;
+    width:53px;
+    margin-right:5px;
+    font-size: 1.8rem;
+    border-radius: 50px;
+    background: #dde1e7;
+    box-shadow:  6px 6px 5px #a4a7ab,
+             -6px -6px 5px #ffffff;
+}
+
+/* neumorphism : https://neumorphism.io/#e0e0e0 */
+.icon--contact li:hover {
+    border-radius: 50px;
+    background: #dde1e7;
+    box-shadow: inset 6px 6px 5px #a4a7ab,
+                inset -6px -6px 5px #ffffff;
+}
+
+.icon--contact a {
+    text-align: center;
+}
+.icon--contact a i {
+    color:#4d64b3;
+}
+
+
+
+
+/* ----------------------------------------------- */
+
+@media (min-width: 576px) and (max-width:950px){
+
+   .header_container{
+        min-height:60vh;
+    }
+
+    .header--bottom--list--skills{
+        font-size: 0.865rem;
+    }
+
+    .menu_deploy{
+        display:inline-block;
+        margin-right:1.5rem;
+    }
+
+    .menu_deco{
+        display:none;
+    }
+
+    .aboutMe__photo{
+        margin-top:-1.5rem;
+    }
+
+    .card_dim{
+        width:16rem;
+        height:24rem;
+        margin-top:1.5rem;
+    }
+
+
+}
+
+@media(min-width: 950px){
+
+   .header_container{
+        min-height:60vh;
+    }
+    .header--name{
+        font-size: 1.6rem;
+    }
+    .header--bottom--list--skills{
+        font-size: 0.865rem;
+    }
+    .menu_deploy{
+        display:inline-block;
+        margin-right:1.5rem;
+    }
+    .menu_deploy:hover{
+        font-size: large;
+    }
+
+    .menu_deco{
+        display:none;
+    }
+
+    .aboutMe__photo{
+        margin-top:-1.5rem;
+    }
+
+
+}
