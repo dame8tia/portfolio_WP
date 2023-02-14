@@ -221,12 +221,13 @@ header{
 .card-body .btn-primary{
     width: fit-content;
 }
-.img__02{
-    background-image: url("/images/nasa_saturn.jpg");
+
+/* .img__02{
+    background-image: url("../../uploads___/2023/02/nasa_saturn-150x150.jpg");
 }
 .img__03{
-    background-image: url("/images/rivers.jpg");
-}
+    background-image: url("../../uploads___/2023/02/rivers-150x150.jpg");
+} */
 
 /* Timeline */
 

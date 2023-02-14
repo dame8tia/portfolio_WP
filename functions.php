@@ -33,3 +33,79 @@ function greta_my_style() {
 
 }
 add_action('wp_enqueue_scripts', 'greta_my_style',11);
+
+// création CPT 
+// --- > COMPETENCES
+function portfolio_register_post_types_competences() {
+    $labels = array(
+        'name' => 'competences',
+        'all_items' => 'Mes compétences',  // affiché dans le sous menu
+        'singular_name' => 'Compétence',
+        'add_new_item' => 'Ajouter une compétence',
+        'edit_item' => 'Modifier une compétence',
+        'menu_name' => 'Compétences'
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => array( 'title', 'editor','thumbnail' ),
+        'menu_position' => 5, 
+        'menu_icon' => 'dashicons-admin-customizer',
+    );
+
+    register_post_type( 'competences', $args );
+}
+add_action( 'init', 'portfolio_register_post_types_competences' );
+
+// --- > REALISATIONS
+function portfolio_register_post_types_realisations() {
+    $labels = array(
+        'name' => 'realisations',
+        'all_items' => 'Mes réalisations',  // affiché dans le sous menu
+        'singular_name' => 'Réalisations',
+        'add_new_item' => 'Ajouter une réalisation',
+        'edit_item' => 'Modifier une réalisation',
+        'menu_name' => 'Réalisations'
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => array( 'title', 'editor','thumbnail' ),
+        'menu_position' => 5, 
+        'menu_icon' => 'dashicons-admin-customizer',
+    );
+
+    register_post_type( 'realisations', $args );
+}
+add_action( 'init', 'portfolio_register_post_types_realisations' );
+
+// --- > EXPERIENCES
+function portfolio_register_post_types_experiences() {
+    $labels = array(
+        'name' => 'experiences',
+        'all_items' => 'Mes expériences',  // affiché dans le sous menu
+        'singular_name' => 'Expérience',
+        'add_new_item' => 'Ajouter une expérience',
+        'edit_item' => 'Modifier une expérience',
+        'menu_name' => 'Expériences'
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => array( 'title', 'editor','thumbnail' ),
+        'menu_position' => 5, 
+        'menu_icon' => 'dashicons-admin-customizer',
+    );
+
+    register_post_type( 'experiences', $args );
+}
+add_action( 'init', 'portfolio_register_post_types_experiences' );

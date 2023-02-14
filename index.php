@@ -1,109 +1,30 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio</title> -->
 
    <!--  <script src="script/open_accordeon.js"></script> -->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<!--     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style.css"> -->
 
 
     <!-- site sur lequel s'inspirer un jour https://kuon.space/ -->
     <!-- delphine-scepanek -->
 
-</head>
+<!-- </head> -->
 
 
-<body>
+<!-- <body> -->
 
-    <header>
-        <div class="container header_container d-flex flex-column justify-content-between">
-            <!-- header--top -->
-            <div class="row p-1"> <!-- Partie haute -->
-                <div class="col-6 align-self-start">
-                    <p class="font_custom_dev color_custom_01 fs-3">Laëtitia <br>TURQUOIS</p>               
-                </div> 
+<?php get_header(); ?>
 
-                <div class="col-6 text-left"> 
-                    <nav class="navbar navbar-expand-lg justify-content-end">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <i class="bi bi-list"></i>
-                        </button>
-                        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                            <ul class="navbar-nav d-flex flex-column align-items-end mb-2 mb-lg-0">
-                            <!-- <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="#">Home</a>                                                     
-                                </li> -->                
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#aboutMe">A propos de moi</a>
-                                </li>                
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#skills">Compétences</a>
-                                </li>                
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#rea">Réalisations</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>    
-                </div>
-            </div>
-            <!-- header--middle -->  
-            <div class="row align-items-center h-50"> <!-- Partie médiane -->
-                <div class="col-12 col-sm-6"> 
-                    <p class="text-center font_custom_dev color_custom_01 mt-5 mt-sm-0 fs-1">Système d'informations géographiques</p>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <p class="text-center font_custom_dev fs-1 text-white mt-5 mt-sm-0 fs-1">Eau & Milieux aquatiques</p>                
-                </div>
-                
-            </div>
-            <!-- header--bottom // h-sm-auto existe ?-->        
-            <div class="row  pt-sm-5 mb-2 mb-sm-0"> <!-- Partie basse -->
-                <div class="col-9">
-                    <div class="menu">
-                        <ul class="d-flex flex-column list-unstyled my-0">
-                            <li>
-                                <a id="header_devWeb" class="lien" href="#skill_devWeb" onclick="open_menu_dev()">
-                                    <span class="menu_deco"></span>
-                                    <span class="menu_deploy text-white">Développement Web</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a id="header_geomatik" class="lien" href="#skill_geomatik" onclick="open_menu_geo()">
-                                    <span class="menu_deco"></span>
-                                    <span class="menu_deploy text-white">Géomatique</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a id="header_sgbd" class="lien"  href="#skill_sgbd" onclick="open_menu_sgbd()">
-                                    <span class="menu_deco"></span>
-                                    <span class="menu_deploy text-white">Base de données</span>
-                                </a>
-                            </li>
-                        </ul>
-<!--                         <ul class="list-group list-group-flush flex-column flex-sm-row">
-                            <li class="list-group-item p-1 bg-transparent header--bottom--list--skills" >Développement WEB<span class="border-end ps-1"></span></li>
-                            <li class="list-group-item p-1 bg-transparent header--bottom--list--skills">Base de données<span class="border-end ps-1"></span></li>
-                            <li class="list-group-item p-1 bg-transparent header--bottom--list--skills">Géomatique</li>
-                        </ul> -->
-                    </div>                    
-                </div>
-
-                <div class="col-3 mt-auto text-end">
-                    <a href="#contact" class="text-white text-decoration-none p-1">
-                        <span>Contact</span>
-                    </a>                                
-                </div>
-            </div>
-        </div>
-    </header>
+<h1>INDEX</h1>
 
     <main>
         <!-- A propos de moi -->
@@ -112,7 +33,7 @@
                 <div class="row aboutMe__photo justify-content-center"> <!-- Maphoto -->
                     <div class="col-6 text-center">
                         <div>                            
-                            <img class="avatar rounded-circle" src="" alt="ma tête">
+                            <img class="avatar rounded-circle" src=<?= home_url("wp-content/uploads/2023/02/ma_tete.png")?> alt="ma tête">
                         </div>                        
                     </div>        
                 </div>
@@ -205,44 +126,11 @@
                                             <li><strong>Modélisation MCD</strong> MERISE et UML </li>
                                             <li>PostGreSQL</li>
                                             <li>MySQL</li>
-                                        </ul>
-                        
-                                        
+                                        </ul>                      
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <!--<div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div> -->                            
-                        <!--<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active position-relative">
-                                        <img src="images/skill_dev_web.jpg" class="d-block w-100 vh-50" alt="devWeb">
-                                        <p class="position-absolute bottom-50 end-50 text-white fs-2">Développement WEB</p>
-                                    </div>
-                                    <div class="carousel-item">                                            
-                                        <img src="images/skill_db.jpg" class="d-block w-562 vh-50" alt="database">
-                                        <p class="position-absolute bottom-50 end-50 text-white fs-2">Système de gestion de base de données</p>
-                                    </div>
-                                    <div class="carousel-item sig">
-                                        <img src="images/skill_sig.jpg" class="d-block w-562 vh-50 opacity-75" alt="SIG"  >
-                                        <p class="position-absolute bottom-50 end-50 text-white fs-2">Géomatique</p>
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div> -->
                     </div>        
                 </div>                  
             </div>
@@ -256,7 +144,7 @@
                     <div class="col-12 col-sm-6 col-lg-4">
                         <div class="card mx-auto shadow-lg p-3 mb-5 card_dim bg-white">
                             <div class="bcg__card__rea">
-                                <img src="" class="card-img-top" alt="..."> <!-- images/aeag.jpg -->
+                                <img src=<?= home_url("wp-content/uploads/2023/02/aeag-scaled.jpg")?> class="card-img-top" alt="..."> <!-- images/aeag.jpg -->
                             </div>                            
                             <div class="card-body display-card">
                                 <h5 class="card-title">Replique site Web AEAG</h5>
@@ -268,8 +156,10 @@
                     <div class="col-12 col-sm-6 col-lg-4">
                         <div class="card mx-auto shadow-lg p-3 mb-5 card_dim bg-white">
                             <div class="bcg__card__rea img__02 ">
+                            
                             </div>
-                            <!-- <img src="images/nasa_saturn.jpg" class="card-img-top" alt="..."> -->
+                            <img src=<?= home_url("wp-content/uploads/2023/02/nasa_saturn.jpg")?> class="card-img-top" alt="..." width= "150px" height = "150px">
+                            
                             <div class="card-body display-card">
                                 <h5 class="card-title">Portfolio</h5>
                                 <p class="card-text">Présentation de mon parcours, mes compétences et mes réalisations</p>
@@ -280,6 +170,7 @@
                     <div class="col-12 col-sm-6 col-lg-4">
                         <div class="card mx-auto shadow-lg p-3 mb-5 card_dim bg-white">
                             <div class="bcg__card__rea img__03">
+                                <img src=<?= home_url("wp-content/uploads/2023/02/rivers.jpg")?> class="card-img-top" alt="..." width= "150px" height = "150px">
                             </div>                            
                             <div class="card-body display-card">
                                 <h5 class="card-title">Fiche diagnosyic</h5>
@@ -331,53 +222,6 @@
             </div>
         </div>
 
-        <!-- Expériences-->
- <!--        <section id="exp" class="mb-3">
-            <div class="container">
-                <h1>Experiences</h1> 
-                <row class="row exp__backgr">
-                    <div class="col-12">
-                        <div class="exp__part__01 w-100 d-flex justify-content-between align-items-center">
-                            <div class="exp__square__red p-1 text-white fs-6">
-                                <p class="m-0">Syndicat de rivière <br>
-                                09/2020 - 07/2021</p>
-                            </div>
-                            <div class="exp__detail fs-5 my-2" >
-                                <p class="my-0 fs-5">Chef de projet SIG</p>
-                                <p class="my-0 fs-6">Conception et réalisation d’un outil de diagnostic des pressions sur les masses d’eau DCE</p>
-                            </div>
-                        </div>   
-                    </div>
-                    <div class="col-12">
-                        <div class="exp__part__01 w-100 d-flex justify-content-between align-items-center">    
-                            <div class="exp__detail__02 fs-5 my-2" >
-                                <p class="my-0 fs-5">Coordinatrice bassin versant</p>
-                                <p class="my-0 fs-6">A renseigner</p>
-                            </div>
-                            <div class="exp__square__red__02 p-1 text-white fs-6">
-                                <p class="m-0">UFBAG<br>
-                                    04/2019 - 09/2020
-                                </p>
-                            </div>
-                           
-                        </div>   
-                    </div>
-                    <div class="col-12">
-                        <div class="exp__part__01 w-100 d-flex justify-content-between align-items-center">
-                            <div class="exp__square__red p-1 text-white fs-6">
-                                <p class="m-0">Association protection des milieux aquatiques<br>
-                                    04/2015 - 09/2019</p>
-                            </div>
-                            <div class="exp__detail fs-5 my-2" >
-                                <p class="my-0 fs-5">Chef de projet SIG</p>
-                                <p class="my-0 fs-6">Mise en place d'une architecture informatique pour la structuration, l'exploitation et la valorisation des données de l'association (température de l'eau, inventaires piscicoles et hydro-morphologie)</p>
-                            </div>
-                        </div>   
-                    </div>
-                </row>
-            </div>
-        </section>
- -->
         <!-- Contact -->
         <!-- https://lesdocs.fr/envoi-du-contenu-dun-formulaire-vers-un-email/ -->
         <section class="mt-5 mb-3">
@@ -423,23 +267,9 @@
 
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="background_footer">
-                <div class="row">
-                    <div class="col">
-                        <ul class = "icon--contact">
-                            <!-- icones récupérées sur https://icons.getbootstrap.com/#icons -->
-                            <li><a href="https://www.linkedin.com/in/laetitia-turquois-07130676" target="_blank"><i class="bi bi-linkedin"></i></a></li>
-                            <li><a href="https://github.com/dame8tia" target="_blank"><i class="bi bi-github "></i></a>  </li>
-                        </ul>            
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>   
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  
+    <?php get_footer(); ?>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> -->
 </body>
 
 </html>
