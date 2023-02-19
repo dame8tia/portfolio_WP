@@ -54,7 +54,27 @@
                 <div class="col-9">
                     <div class="menu">
                         <ul class="d-flex flex-column list-unstyled my-0">
-                            <li>
+
+                            <?php wp_reset_postdata();?>
+                                <?php 
+                                $query = new WP_Query(
+                                    [
+                                    'post_type'=> 'competences'    
+                                    ]
+                                );?>
+                                <?php if ( $query->have_posts() ) : ?>
+                                    <?php while($query->have_posts()): $query->the_post();?>
+                                        <li>
+                                            <a id="<?php echo "header_".the_title(); ?>" class="lien" href="<?= "#skills_",the_ID(); ?>" onclick="open_menu_dev()">
+                                                <span class="menu_deco"></span>
+                                                <span class="menu_deploy text-white"><?php echo the_title(); ?></span>
+                                            </a>
+                                        </li>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
+                            <?php wp_reset_postdata();?>
+
+<!--                             <li>
                                 <a id="header_devWeb" class="lien" href="#skill_devWeb" onclick="open_menu_dev()">
                                     <span class="menu_deco"></span>
                                     <span class="menu_deploy text-white">Développement Web</span>
@@ -71,7 +91,7 @@
                                     <span class="menu_deco"></span>
                                     <span class="menu_deploy text-white">Base de données</span>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>                    
                 </div>

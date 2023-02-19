@@ -40,11 +40,59 @@
 
         
         <!-- Compétences -->
-        <?php get_template_part('competences'); ?>
+        <section id="skills" class="mb-3">
+            <div class="container">   
+                <?php get_template_part('competences'); ?>
+            </div>
+        </section>
         <!-- Réalisations -->
         <?php get_template_part('realisations'); ?>
         <!-- Expériences -->
         <?php get_template_part('experiences'); ?>
+
+                <!-- Contact -->
+        <!-- https://lesdocs.fr/envoi-du-contenu-dun-formulaire-vers-un-email/ -->
+        <section class="mt-5 mb-3">
+            <div id="contact" class="container">
+                <div class="row justify-content-center">
+                    <div class="col-8 encadre px-5 py-3 text-white">
+                        <h2 class="text-uppercase text-center">Contactez-moi</h2>
+                        
+                        <form action="email.php" method="post">
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Votre email</label>
+                                <input name="expediteur_name" type="email" class="form-control" id="id_mail" placeholder="name@example.com">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput2" class="form-label">Sujet</label>
+                                <input name="sujet_name" type="text" class="form-control" id="id_sujet">
+                            </div>                            
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                                <textarea name="message_name" class="form-control" id="id_description" rows="3"></textarea>
+                            </div>
+
+                            <input class="text-center mb-3" type="submit" value="Envoyez">
+
+                        </form>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end mt-3">
+                    <span>L. TURQUOIS - </span><span id="date_folio"></span>
+                    <script>
+                        let date = new Date();
+                        let auj = date.getFullYear();
+                        console.log(auj) 
+                        let date_folio = document.getElementById("date_folio");
+                        date_folio.innerHTML = auj;                    
+                    </script>
+                </div>
+
+            </div>
+        </section>
 
     </main>
 

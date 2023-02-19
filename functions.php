@@ -21,6 +21,7 @@ add_action('after_setup_theme', 'greta_support_theme');
  */
 function greta_style_bootstrap() {
 	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css');
+    wp_enqueue_style( 'bootstrapIcons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css');
 	wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js');
 }
 add_action('wp_enqueue_scripts', 'greta_style_bootstrap');
